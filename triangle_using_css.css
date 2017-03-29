@@ -1,0 +1,79 @@
+@font-face {
+    font-family: ShadowsIntoLight;
+    src: url('ShadowsIntoLight.ttf');
+}
+@font-face {
+    font-family: OldStandard-Regular;
+    src: url('OldStandard-Regular.ttf');
+}
+*{
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100%;
+}
+header {
+    font-family: OldStandard-Regular,sans-serif;
+    font-size: 50px;
+    color: #4d4d4d;
+    text-align: center;
+    margin: 25px 0 15px;
+}
+.wrapper {
+    width: 620px;
+    margin:10px auto;
+}
+.box {
+    position: relative;
+    float: left;
+    width: 260px;
+    height: 175px;
+    margin: 25px;
+    padding: 15px;
+    background-color: #d66c5c;
+    border-radius: 5px;
+}
+.box .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border:15px solid transparent;
+}
+.box .triangle.top {
+    border-bottom-color: #d66c5c;
+    top: -28.8px;/*查看一下Chrome会发现border的总高度小于30px；*/
+    left: 50%;
+    transform: translateX(-50%);
+}
+.box .triangle.right {
+    border-left-color: #d66c5c;
+    right: -28.8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.box .triangle.bottom {
+    border-top-color: #d66c5c;
+    bottom: -28.8px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.box .triangle.left {
+    border-right-color: #d66c5c;
+    left: -28.8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 175px;
+    text-align: center;
+    line-height: 175px;
+    color: white;
+    font-family: ShadowsIntoLight,sans-serif;
+    font-size: 30px;
+    margin:0;
+}
